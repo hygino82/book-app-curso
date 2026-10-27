@@ -25,5 +25,11 @@
     <string name="autor">Autor</string>
     <string name="ficcao">Ficção</string>
     <string name="icone_de_favorito">Icone de favorito</string>
+    <string name="valor_do_autor">Valor do autor</string>
+    <string name="genero">Gênero</string>
+    <string name="valor_do_genero">Valor do gênero</string>
+    <string name="livro_favorito">Livro favorito?</string>
+    <string name="favorito">Favorito</string>
+    <string name="remover_livro">Remover livro</string>
 
 </resources>
