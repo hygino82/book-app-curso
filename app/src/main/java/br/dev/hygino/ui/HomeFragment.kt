@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.dev.hygino.BookConstants.KEY.BOOK_ID
 import br.dev.hygino.R
 import br.dev.hygino.databinding.FragmentHomeBinding
 import br.dev.hygino.ui.adapter.BookAdapter
@@ -42,11 +43,13 @@ class HomeFragment : Fragment() {
     }
 
     private fun attachListener() {
-       adapter.attachListener(object :BookListener{
-           override fun onClick(id: Int) {
-             findNavController().navigate(R.id.navigation_details)
-           }
-       })
+        adapter.attachListener(object : BookListener {
+            override fun onClick(id: Int) {
+                val bundle = Bundle()
+                bundle.putInt(BOOK_ID, id)
+                findNavController().navigate(R.id.navigation_details,bundle)
+            }
+        })
     }
 
     private fun setObservers() {
