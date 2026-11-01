@@ -1,4 +1,4 @@
-package br.dev.hygino
+package br.dev.hygino.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 

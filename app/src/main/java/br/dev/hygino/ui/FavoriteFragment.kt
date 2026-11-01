@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import br.dev.hygino.databinding.FragmentFavoriteBinding
-import br.dev.hygino.ui.viewmodels.FavoriteViewModel
+import br.dev.hygino.ui.viewmodel.FavoriteViewModel
 
 class FavoriteFragment : Fragment() {
 

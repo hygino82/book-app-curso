@@ -5,15 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.dev.hygino.databinding.ItemBookBinding
 import br.dev.hygino.entity.BookEntity
+import br.dev.hygino.ui.listener.BookListener
 import br.dev.hygino.ui.viewholder.BookViewHolder
 
 class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
     private var bookList: List<BookEntity> = listOf()
+    private lateinit var bookListener: BookListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val view = ItemBookBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return BookViewHolder(view)
+        return BookViewHolder(view, bookListener)
     }
 
     override fun getItemCount(): Int {
@@ -27,5 +29,9 @@ class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
     fun updateBooks(list: List<BookEntity>) {
         bookList = list
         notifyDataSetChanged()
+    }
+
+    fun attachListener(listener: BookListener) {
+        bookListener = listener
     }
 }
